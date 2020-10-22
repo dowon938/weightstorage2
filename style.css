@@ -1,0 +1,323 @@
+* {
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+body {
+  margin: 10px 10px;
+  padding: 0;
+}
+/*
+==================================================
+=====================main=========================
+==================================================
+*/
+.main {
+  display: flex;
+  flex-flow: column;
+  margin: 10px 0px;
+}
+.maincon_back {
+  background-color: antiquewhite;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  height: 20px;
+  margin: -20px 0px 0px 0px;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+.maincon_number,
+.maincon_graph {
+  display: none;
+  background-color: orange;
+  width: 100%;
+  height: 150px;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+.maincon_number h1 {
+  font-family: "Jost";
+  font-weight: 800;
+  font-style: italic;
+}
+.main_btn {
+  display: flex;
+}
+.main_btn label {
+  background: antiquewhite;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 10px;
+  height: 35px;
+  width: 50%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+.main input {
+  display: none;
+}
+input[id="maintab1"]:checked ~ .maincon_number {
+  display: flex;
+  border-bottom-right-radius: 20px;
+}
+input[id="maintab2"]:checked ~ .maincon_graph {
+  display: flex;
+  border-bottom-left-radius: 20px;
+}
+input[id="maintab1"]:checked ~ .main_btn > label[for="maintab1"] {
+  background: orange;
+  z-index: 2;
+}
+input[id="maintab2"]:checked ~ .main_btn > label[for="maintab2"] {
+  background: orange;
+  z-index: 2;
+}
+/*
+==================================================
+=====================dead=========================
+==================================================
+*/
+.dead {
+  display: flex;
+  flex-flow: row;
+  margin: 10px 0px;
+}
+.deadcon_back {
+  background-color: antiquewhite;
+  width: 20px;
+  position: relative;
+  z-index: 1;
+  right: 20px;
+  margin: 0px -21px 0px 0px;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+.deadcon_number,
+.deadcon_graph {
+  display: none;
+  background-color: rgb(255, 240, 101);
+  width: 88%;
+  height: 110px;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+.deadcon_number h1 {
+  font-family: "Jost";
+  font-weight: 800;
+  font-style: italic;
+}
+.dead_btn {
+  display: flex;
+  flex-flow: column;
+  width: 12%;
+}
+.dead_btn label {
+  background: antiquewhite;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+.dead input {
+  display: none;
+}
+input[id="deadtab1"]:checked ~ .deadcon_number {
+  display: flex;
+  border-bottom-right-radius: 20px;
+}
+input[id="deadtab2"]:checked ~ .deadcon_graph {
+  display: flex;
+  border-top-right-radius: 20px;
+}
+input[id="deadtab1"]:checked ~ .dead_btn > label[for="deadtab1"] {
+  background: rgb(255, 240, 101);
+  z-index: 2;
+}
+input[id="deadtab2"]:checked ~ .dead_btn > label[for="deadtab2"] {
+  background: rgb(255, 240, 101);
+  z-index: 2;
+}
+
+/*
+==================================================
+=====================squat=========================
+==================================================
+*/
+.squat {
+  display: flex;
+  flex-flow: row;
+  margin: 10px 0px;
+}
+.squatcon_back {
+  background-color: antiquewhite;
+  width: 20px;
+  position: relative;
+  z-index: 1;
+  right: 20px;
+  margin: 0px -21px 0px 0px;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+.squatcon_number,
+.squatcon_graph {
+  display: none;
+  background-color: rgb(255, 240, 101);
+  width: 88%;
+  height: 110px;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+.squatcon_number h1 {
+  font-family: "Jost";
+  font-weight: 800;
+  font-style: italic;
+}
+.squat_btn {
+  display: flex;
+  flex-flow: column;
+  width: 12%;
+}
+.squat_btn label {
+  background: antiquewhite;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+.squat input {
+  display: none;
+}
+input[id="squattab1"]:checked ~ .squatcon_number {
+  display: flex;
+  border-bottom-right-radius: 20px;
+}
+input[id="squattab2"]:checked ~ .squatcon_graph {
+  display: flex;
+  border-top-right-radius: 20px;
+}
+input[id="squattab1"]:checked ~ .squat_btn > label[for="squattab1"] {
+  background: rgb(255, 240, 101);
+  z-index: 2;
+}
+input[id="squattab2"]:checked ~ .squat_btn > label[for="squattab2"] {
+  background: rgb(255, 240, 101);
+  z-index: 2;
+}
+/*
+==================================================
+=====================bench=========================
+==================================================
+*/
+.bench {
+  display: flex;
+  flex-flow: row;
+  margin: 10px 0px;
+}
+.benchcon_back {
+  background-color: antiquewhite;
+  width: 20px;
+  position: relative;
+  z-index: 1;
+  right: 20px;
+  margin: 0px -21px 0px 0px;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+.benchcon_number,
+.benchcon_graph {
+  display: none;
+  background-color: rgb(255, 240, 101);
+  width: 88%;
+  height: 110px;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+.benchcon_number h1 {
+  font-family: "Jost";
+  font-weight: 800;
+  font-style: italic;
+}
+.bench_btn {
+  display: flex;
+  flex-flow: column;
+  width: 12%;
+}
+.bench_btn label {
+  background: antiquewhite;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+.bench input {
+  display: none;
+}
+input[id="benchtab1"]:checked ~ .benchcon_number {
+  display: flex;
+  border-bottom-right-radius: 20px;
+}
+input[id="benchtab2"]:checked ~ .benchcon_graph {
+  display: flex;
+  border-top-right-radius: 20px;
+}
+input[id="benchtab1"]:checked ~ .bench_btn > label[for="benchtab1"] {
+  background: rgb(255, 240, 101);
+  z-index: 2;
+}
+input[id="benchtab2"]:checked ~ .bench_btn > label[for="benchtab2"] {
+  background: rgb(255, 240, 101);
+  z-index: 2;
+}
