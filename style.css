@@ -10,9 +10,60 @@ h6 {
   margin: 0;
 }
 body {
-  margin: 10px 10px;
+  margin: 0px;
   padding: 0;
 }
+.home input {
+  display: none;
+}
+.home1 {
+  margin: 10px 10px;
+}
+.home_btn {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0%;
+  box-shadow: 0px -2px 4px lightgrey;
+  z-index: 3;
+}
+.home_btn label {
+  display: flex;
+  background: white;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 80px;
+  cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+.hometab_bar {
+  background: olivedrab;
+  width: 20%;
+  height: 6px;
+  border-radius: 3px;
+  position: fixed;
+  bottom: 74px;
+  left: 15%;
+  z-index: 3;
+}
+.home1,
+.home2 {
+  display: none;
+}
+input[id="hometab1"]:checked ~ .home1 {
+  display: block;
+}
+input[id="hometab2"]:checked ~ .home2 {
+  display: block;
+}
+input[id="hometab2"]:checked ~ .hometab_bar {
+  left: 65%;
+}
+
 /*
 ==================================================
 =====================main=========================
@@ -20,8 +71,10 @@ body {
 */
 .main {
   display: flex;
+  position: sticky;
+  top: 10px;
   flex-flow: column;
-  margin: 10px 0px;
+  z-index: 10;
 }
 .maincon_back {
   background-color: antiquewhite;
@@ -37,7 +90,7 @@ body {
   display: none;
   background-color: orange;
   width: 100%;
-  height: 150px;
+  height: 160px;
   flex-flow: column;
   justify-content: center;
   align-items: center;
@@ -318,6 +371,161 @@ input[id="benchtab1"]:checked ~ .bench_btn > label[for="benchtab1"] {
   z-index: 2;
 }
 input[id="benchtab2"]:checked ~ .bench_btn > label[for="benchtab2"] {
+  background: rgb(255, 240, 101);
+  z-index: 2;
+}
+/*
+==================================================
+=====================military=========================
+==================================================
+*/
+.military {
+  display: flex;
+  flex-flow: row;
+  margin: 10px 0px;
+}
+.militarycon_back {
+  background-color: antiquewhite;
+  width: 20px;
+  position: relative;
+  z-index: 1;
+  right: 20px;
+  margin: 0px -21px 0px 0px;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+.militarycon_number,
+.militarycon_graph {
+  display: none;
+  background-color: rgb(255, 240, 101);
+  width: 88%;
+  height: 110px;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+.militarycon_number h1 {
+  font-family: "Jost";
+  font-weight: 800;
+  font-style: italic;
+}
+.military_btn {
+  display: flex;
+  flex-flow: column;
+  width: 12%;
+}
+.military_btn label {
+  background: antiquewhite;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+.military input {
+  display: none;
+}
+input[id="militarytab1"]:checked ~ .militarycon_number {
+  display: flex;
+  border-bottom-right-radius: 20px;
+}
+input[id="militarytab2"]:checked ~ .militarycon_graph {
+  display: flex;
+  border-top-right-radius: 20px;
+}
+input[id="militarytab1"]:checked ~ .military_btn > label[for="militarytab1"] {
+  background: rgb(255, 240, 101);
+  z-index: 2;
+}
+input[id="militarytab2"]:checked ~ .military_btn > label[for="militarytab2"] {
+  background: rgb(255, 240, 101);
+  z-index: 2;
+}
+
+/*
+==================================================
+=====================pull_up=========================
+==================================================
+*/
+.pull_up {
+  display: flex;
+  flex-flow: row;
+  margin: 10px 0px;
+}
+.pull_upcon_back {
+  background-color: antiquewhite;
+  width: 20px;
+  position: relative;
+  z-index: 1;
+  right: 20px;
+  margin: 0px -21px 0px 0px;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+.pull_upcon_number,
+.pull_upcon_graph {
+  display: none;
+  background-color: rgb(255, 240, 101);
+  width: 88%;
+  height: 110px;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+.pull_upcon_number h1 {
+  font-family: "Jost";
+  font-weight: 800;
+  font-style: italic;
+}
+.pull_up_btn {
+  display: flex;
+  flex-flow: column;
+  width: 12%;
+}
+.pull_up_btn label {
+  background: antiquewhite;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+.pull_up input {
+  display: none;
+}
+input[id="pull_uptab1"]:checked ~ .pull_upcon_number {
+  display: flex;
+  border-bottom-right-radius: 20px;
+}
+input[id="pull_uptab2"]:checked ~ .pull_upcon_graph {
+  display: flex;
+  border-top-right-radius: 20px;
+}
+input[id="pull_uptab1"]:checked ~ .pull_up_btn > label[for="pull_uptab1"] {
+  background: rgb(255, 240, 101);
+  z-index: 2;
+}
+input[id="pull_uptab2"]:checked ~ .pull_up_btn > label[for="pull_uptab2"] {
   background: rgb(255, 240, 101);
   z-index: 2;
 }
