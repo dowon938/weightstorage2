@@ -6,6 +6,110 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script>
+        function exercisehtml(name){
+        document.write(`<div class="${name}">
+            <input type="radio" id="${name}tab1" name="${name}" checked>
+            <input type="radio" id="${name}tab2" name="${name}">
+
+            <div class="${name}con_number">
+                <h6>2020.10.27.</h6>
+                <h1> 500 KG</h1>
+                <h4>3대 운동 중량</h4>
+            </div>
+            <div class="${name}con_graph">
+                <h6>2020.10.27.</h6>
+                <h1> 그래프</h1>
+                <h4>그래프 그래프</h4>
+            </div>
+            <div class="${name}con_back"></div>
+
+            <div class="${name}_btn">
+                <label for="${name}tab1">tab1</label>
+                <label for="${name}tab2">tab2</label>
+            </div>
+        </div>`);}
+        function exerciseStyle(name){
+            document.write(`<style>
+            .${name} {
+                display: flex;
+                flex-flow: row;
+                margin: 10px 0px;
+                }
+                .${name}con_back {
+                background-color: antiquewhite;
+                width: 20px;
+                position: relative;
+                z-index: 1;
+                right: 20px;
+                margin: 0px -21px 0px 0px;
+                box-shadow: 4px 4px 4px lightgrey;
+                }
+                .${name}con_number,
+                .${name}con_graph {
+                display: none;
+                background-color: rgb(255, 240, 101);
+                width: 88%;
+                height: 110px;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                position: relative;
+                z-index: 2;
+                box-shadow: 4px 4px 4px lightgrey;
+                }
+                .${name}con_number h1 {
+                font-family: "Jost";
+                font-weight: 800;
+                font-style: italic;
+                }
+                .${name}_btn {
+                display: flex;
+                flex-flow: column;
+                width: 12%;
+                }
+                .${name}_btn label {
+                background: antiquewhite;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                position: relative;
+                z-index: 1;
+                box-shadow: 4px 4px 4px lightgrey;
+                }
+                .${name} input {
+                display: none;
+                }
+                input[id="${name}tab1"]:checked ~ .${name}con_number {
+                display: flex;
+                border-bottom-right-radius: 20px;
+                }
+                input[id="${name}tab2"]:checked ~ .${name}con_graph {
+                display: flex;
+                border-top-right-radius: 20px;
+                }
+                input[id="${name}tab1"]:checked ~ .${name}_btn > label[for="${name}tab1"] {
+                background: rgb(255, 240, 101);
+                z-index: 2;
+                }
+                input[id="${name}tab2"]:checked ~ .${name}_btn > label[for="${name}tab2"] {
+                background: rgb(255, 240, 101);
+                z-index: 2;
+                }
+                </style>`)
+        }
+        function exercise(name){
+            exercisehtml(name);
+            exerciseStyle(name);
+        }
+    </script>
 </head>
 <body>
     <div class="home">
@@ -33,110 +137,15 @@
             <label for="maintab2">tab2</label>
         </div>
             </div>
-            <div class="dead">
-        <input type="radio" id="deadtab1" name="dead" checked>
-        <input type="radio" id="deadtab2" name="dead">
-
-        <div class="deadcon_number">
-            <h6>2020.10.27.</h6>
-            <h1> 500 KG</h1>
-            <h4>3대 운동 중량</h4>
-        </div>
-        <div class="deadcon_graph">
-            <h6>2020.10.27.</h6>
-            <h1> 그래프</h1>
-            <h4>그래프 그래프</h4>
-        </div>
-        <div class="deadcon_back"></div>
-
-        <div class="dead_btn">
-            <label for="deadtab1">tab1</label>
-            <label for="deadtab2">tab2</label>
-        </div>
-            </div>
-            <div class="squat">
-        <input type="radio" id="squattab1" name="squat" checked>
-        <input type="radio" id="squattab2" name="squat">
-
-        <div class="squatcon_number">
-            <h6>2020.10.27.</h6>
-            <h1> 500 KG</h1>
-            <h4>3대 운동 중량</h4>
-        </div>
-        <div class="squatcon_graph">
-            <h6>2020.10.27.</h6>
-            <h1> 그래프</h1>
-            <h4>그래프 그래프</h4>
-        </div>
-        <div class="squatcon_back"></div>
-
-        <div class="squat_btn">
-            <label for="squattab1">tab1</label>
-            <label for="squattab2">tab2</label>
-        </div>
-            </div>
-            <div class="bench">
-        <input type="radio" id="benchtab1" name="bench" checked>
-        <input type="radio" id="benchtab2" name="bench">
-
-        <div class="benchcon_number">
-            <h6>2020.10.27.</h6>
-            <h1> 500 KG</h1>
-            <h4>3대 운동 중량</h4>
-        </div>
-        <div class="benchcon_graph">
-            <h6>2020.10.27.</h6>
-            <h1> 그래프</h1>
-            <h4>그래프 그래프</h4>
-        </div>
-        <div class="benchcon_back"></div>
-
-        <div class="bench_btn">
-            <label for="benchtab1">tab1</label>
-            <label for="benchtab2">tab2</label>
-        </div>
-            </div>
-            <div class="military">
-                <input type="radio" id="militarytab1" name="military" checked>
-                <input type="radio" id="militarytab2" name="military">
-        
-                <div class="militarycon_number">
-                    <h6>2020.10.27.</h6>
-                    <h1> 500 KG</h1>
-                    <h4>3대 운동 중량</h4>
-                </div>
-                <div class="militarycon_graph">
-                    <h6>2020.10.27.</h6>
-                    <h1> 그래프</h1>
-                    <h4>그래프 그래프</h4>
-                </div>
-                <div class="militarycon_back"></div>
-        
-                <div class="military_btn">
-                    <label for="militarytab1">tab1</label>
-                    <label for="militarytab2">tab2</label>
-                </div>
-            </div>
-            <div class="pull_up">
-                <input type="radio" id="pull_uptab1" name="pull_up" checked>
-                <input type="radio" id="pull_uptab2" name="pull_up">
-        
-                <div class="pull_upcon_number">
-                    <h6>2020.10.27.</h6>
-                    <h1> 500 KG</h1>
-                    <h4>3대 운동 중량</h4>
-                </div>
-                <div class="pull_upcon_graph">
-                    <h6>2020.10.27.</h6>
-                    <h1> 그래프</h1>
-                    <h4>그래프 그래프</h4>
-                </div>
-                <div class="pull_upcon_back"></div>
-        
-                <div class="pull_up_btn">
-                    <label for="pull_uptab1">tab1</label>
-                    <label for="pull_uptab2">tab2</label>
-                </div>
+            <div class="exercise">
+                <script>
+                    exercise('dead');
+                    exercise('squat');
+                    exercise('bench');
+                    exercise('pullup');
+                    exercise('pushup');
+                    exercise('millitary');
+                </script>
             </div>
         </div>
         <div class="home2">
